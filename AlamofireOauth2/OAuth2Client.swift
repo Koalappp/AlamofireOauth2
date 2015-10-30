@@ -56,10 +56,10 @@ class OAuth2Client : NSObject {
                     "redirect_uri" : self.oauth2Settings.redirectURL,
                     "code" : optionalAuthCode]
                 
-                Alamofire.request(.POST,
+                request(.POST,
                     url, 
                     parameters: parameters,
-                    encoding: Alamofire.ParameterEncoding.URL)
+                    encoding: ParameterEncoding.URL)
                     .responseJSON(completionHandler: { (response) -> Void in
                         switch response.result {
                         case .Success(let json):
@@ -159,10 +159,10 @@ class OAuth2Client : NSObject {
             "redirect_uri" : self.oauth2Settings.redirectURL,
             "refresh_token" : refreshToken]
 
-        Alamofire.request(.POST,
+        request(.POST,
             url, 
             parameters: parameters,
-            encoding: Alamofire.ParameterEncoding.URL)
+            encoding: ParameterEncoding.URL)
             .responseJSON { (response) -> Void in
                 switch response.result {
                 case .Success(let json):
