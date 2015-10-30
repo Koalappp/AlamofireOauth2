@@ -1,8 +1,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
-import KeychainAccess
 
 let kOAuth2AccessTokenService: String = "OAuth2AccessToken"
 let kOAuth2RefreshTokenService: String = "OAuth2RefreshToken"

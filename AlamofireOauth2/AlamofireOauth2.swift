@@ -1,7 +1,6 @@
 
 import Foundation
 import UIKit
-import KeychainAccess
 
 public func UsingOauth2(settings: Oauth2Settings?, performWithToken: (token: String) -> (), errorHandler: () -> () ) {
     if settings == nil {
